@@ -1,5 +1,8 @@
 # flask + pyecharts + pyinstaller 示例程序
 - 离线环境可运行
+- 直接将`dist`目录下的`.exe`复制到任意位置双击打开
+- 然后再浏览器输入地址`http://127.0.0.1:5355/test`
+  - 不要用`ip`地址，因为`test.html`中已经将路由写为`127.0.0.1`
 
 ## 参考
 - [脱离http server离线使用本地echart资源](https://zhuanlan.zhihu.com/p/586325992)
