@@ -17,10 +17,10 @@
     else:
         test_app = Flask(__name__)
   ```
-  - 这样设置只要`url_for`中有`static`便会找到该文件夹的本地**绝对**地址
+  - 这样设置当程序打包为exe时`url_for`中有`static`便会找到该文件夹的本地**绝对**地址
 - 添加`build.py`在打包时候将静态文件打包
   - `'--add-data', './app/static/js/*;static/js',`添加js静态文件
-- 在`.html`中进行如下设置
+- 在`.html`中进行如下设置 **用url_for去请求本地的静态资源**
   - `<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>`以便请求请求静态文件
 - `resources` *不知道是不是有用*
   - 在`Lib\site-packages`中找到pyechart然后将`datasets`与`templates`复制进去
